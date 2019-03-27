@@ -1,7 +1,5 @@
 {
     "tunes": [
-        { "name": "Allo Paris",
-          "original_band": "Mano Solo" },
         { "name": "Antisocial",
           "original_band": "Trust" },
         { "name": "Bob",
@@ -48,7 +46,7 @@
           "original_band": "Guns & Roses" },
         { "name": "Plug in baby",
           "original_band": "Muse" },
-        { "name": "Radio Video",
+        { "name": "Radio video",
           "original_band": "System of a Dawn" },
         { "name": "Reptilia",
           "original_band": "The Strokes" },
@@ -113,6 +111,16 @@
                     "Highway star",
                     "Under pressure",
                     "Antisocial",
-                    "Carry on wayward son"] }
+                    "Carry on wayward son"] },
+        { "date": "2019-03-27",
+          "tunes": ["Hot stuff",
+                    "Paradise city",
+                    "Plug in baby",
+                    "Highway star",
+                    "Knights of Cydonia",
+                    "Antisocial",
+                    "Radio video",
+                    "Walk of life",
+                    "Holiday"] }
     ]
 }
