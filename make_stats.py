@@ -4,6 +4,7 @@ import sys
 import json
 from collections import defaultdict
 from datetime import datetime, timedelta
+import pandas as pd
 
 def usage():
     print("{} <json file>".format(sys.argv[0]))
@@ -19,11 +20,10 @@ def load(path):
         for rehearsal in data['rehearsals']:
             for name in rehearsal['tunes']:
                 tunes[name]['rehearsals'].add(rehearsal['date'])
-    return tunes
-        
+    return data, tunes
 
-def stats(tunes, start='1970-01-01'):
 
+def tunes_stats(tunes, start='1970-01-01'):
     freqs = defaultdict(list)
     for tune in tunes.values():
         nbtimes = len([r for r in tune['rehearsals'] if r >= start])
@@ -34,23 +34,33 @@ def stats(tunes, start='1970-01-01'):
             print('    - {}'.format(name))
     print()
 
-    
+def rehearsals_stats(rehearsals):
+    session_nbs = [ (r['date'], len(r['tunes'])) for r in rehearsals ]
+    df = pd.DataFrame.from_records(session_nbs, columns=('date', 'nbtunes'))
+    print('Min tunes: {}, max: {}, mean: {}'.format(df['nbtunes'].min(),
+                                              df['nbtunes'].max(),
+                                              df['nbtunes'].mean()))
+
+
 def main(json_path):
-    tunes = load(json_path)
-    print('Monthly stats:')
-    print('--------------')
-    monthago = (datetime.now() - timedelta(days=35))\
+    data, tunes = load(json_path)
+    monthago = (datetime.now() - timedelta(days=28))\
                                      .strftime('%Y-%m-%d')
-    stats(tunes, monthago)
+    print('Monthly stats (after {}):'.format(monthago))
+    print('--------------')
+    tunes_stats(tunes, monthago)
     print('All-time stats:')
     print('---------------')
-    stats(tunes)
+    tunes_stats(tunes)
 
-        
+    print('Rehearsal stats:')
+    print('----------------')
+    rehearsals_stats(data['rehearsals'])
+
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         main(sys.argv[1])
     else:
         usage()
 
-    
+
