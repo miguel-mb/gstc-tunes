@@ -28,6 +28,8 @@
           "original_band": "Dona Summers" },
         { "name": "Hotel California",
           "original_band": "The Eagles" },
+        { "name": "Insubordination",
+          "original_band": "Voodoo Glow Skulls" },
         { "name": "Kids aren't alright",
           "original_band": "The Offspring" },
         { "name": "Kids in America",
@@ -50,7 +52,7 @@
           "original_band": "System of a Dawn" },
         { "name": "Reptilia",
           "original_band": "The Strokes" },
-        { "name": "Spider web",
+        { "name": "Spiderwebs",
           "original_band": "No Doubt" },
         { "name": "Superman",
           "original_band": "Goldfinger" },
@@ -121,6 +123,16 @@
                     "Antisocial",
                     "Radio video",
                     "Walk of life",
-                    "Holiday"] }
+                    "Holiday"] },
+        { "date": "2019-04-02",
+          "tunes": ["Paradise city",
+                    "Highway star",
+                    "Thunderstruck",
+                    "Spiderwebs",
+                    "Kids aren't alright",
+                    "Under pressure",
+                    "Time is running out",
+                    "Silvera",
+                    "Insubordination"] }
     ]
 }
