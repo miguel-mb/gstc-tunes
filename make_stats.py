@@ -57,10 +57,15 @@ def main(json_path):
     print('----------------')
     rehearsals_stats(data['rehearsals'])
 
-    print('Récap:')
-    print('------')
-    print('A joué : {}'.format(', '.join(data['rehearsals'][-1]['tunes'])))
-
+    print('Last rehearsal:')
+    print('---------------')
+    print('{}'.format(', '.join(data['rehearsals'][-1]['tunes'])))
+    
+    print('All tunes:')
+    print('----------')
+    for t in sorted(tunes.keys()):
+        print('- {}'.format(t))
+    
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         main(sys.argv[1])
