@@ -140,7 +140,13 @@
                     "Creep",
                     "Silvera",
                     "Sweet child o' mine",
-                    "Radio video"] }
+                    "Radio video"] },
+        { "date": "2019-04-09",
+          "tunes": ["Kids in America",
+                    "Silvera",
+                    "Thunderstruck",
+                    "Highway star",
+                    "Delivery"] }
 
     ]
 }
