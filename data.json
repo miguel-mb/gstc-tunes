@@ -141,12 +141,23 @@
                     "Silvera",
                     "Sweet child o' mine",
                     "Radio video"] },
-        { "date": "2019-04-18",
+        { "date": "2019-04-16",
           "tunes": ["Kids in America",
                     "Silvera",
                     "Thunderstruck",
                     "Highway star",
-                    "Delivery"] }
+                    "Delivery"] },
+        { "date": "2019-04-30",
+          "tunes": ["Carry on wayward son",
+                    "Empty walls",
+                    "You're gonna go far kid",
+                    "Silvera",
+                    "Bob",
+                    "Superman",
+                    "Hotel California",
+                    "Knights of Cydonia",
+                    "Lonely day",
+                    "Thunderstruck"] }
 
     ]
 }
