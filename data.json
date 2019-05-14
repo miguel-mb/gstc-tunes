@@ -157,7 +157,17 @@
                     "Hotel California",
                     "Knights of Cydonia",
                     "Lonely day",
-                    "Thunderstruck"] }
+                    "Thunderstruck"] },
+        { "date": "2019-05-07",
+          "tunes": ["Chop suey",
+                    "Fear of the dark",
+                    "Killing in the name",
+                    "Silvera",
+                    "Time is running out",
+                    "Walk of life",
+                    "Under pressure",
+                    "Spiderwebs",
+                    "Kids in America"] }
 
     ]
 }
