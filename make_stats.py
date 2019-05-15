@@ -34,18 +34,38 @@ def tunes_stats(tunes, start='1970-01-01'):
             print('    - {}'.format(name))
     print()
 
+def tunes_scores(tunes):
+    today = datetime.now()
+    scores = {}
+    for tune in tunes.values():
+        score = 0
+        for rehearsal in tune['rehearsals']:
+            # 20% loss every week            
+            nbweeks = (today - datetime.strptime(rehearsal, '%Y-%m-%d')).days // 7
+            score += 0.8 ** nbweeks
+        scores[tune['name']] = score
+    for tune in sorted(scores, key=scores.get, reverse=True):
+        print('{} ({})'.format(tune, scores[tune]))
+    print()
+    
 def rehearsals_stats(rehearsals):
     session_nbs = [ (r['date'], len(r['tunes'])) for r in rehearsals ]
     df = pd.DataFrame.from_records(session_nbs, columns=('date', 'nbtunes'))
     print('Min tunes: {}, max: {}, mean: {}'.format(df['nbtunes'].min(),
                                               df['nbtunes'].max(),
                                               df['nbtunes'].mean()))
+    print()
 
 
 def main(json_path):
     data, tunes = load(json_path)
     monthago = (datetime.now() - timedelta(days=28))\
                                      .strftime('%Y-%m-%d')
+
+    print('Tunes scores:')
+    print('----------------')
+    tunes_scores(tunes)
+
     print('Monthly stats (after {}):'.format(monthago))
     print('--------------')
     tunes_stats(tunes, monthago)
@@ -56,16 +76,12 @@ def main(json_path):
     print('Rehearsal stats:')
     print('----------------')
     rehearsals_stats(data['rehearsals'])
-
+    
     print('Last rehearsal:')
     print('---------------')
     print('{}'.format(', '.join(data['rehearsals'][-1]['tunes'])))
-    
-    print('All tunes:')
-    print('----------')
-    for t in sorted(tunes.keys()):
-        print('- {}'.format(t))
-    
+    print()
+        
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         main(sys.argv[1])
