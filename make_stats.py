@@ -45,13 +45,13 @@ def tunes_scores(tunes):
             score += 0.8 ** nbweeks
         scores[tune['name']] = score
     for tune in sorted(scores, key=scores.get, reverse=True):
-        print('{} ({})'.format(tune, scores[tune]))
+        print('{} ({:.2f})'.format(tune, scores[tune]))
     print()
     
 def rehearsals_stats(rehearsals):
     session_nbs = [ (r['date'], len(r['tunes'])) for r in rehearsals ]
     df = pd.DataFrame.from_records(session_nbs, columns=('date', 'nbtunes'))
-    print('Min tunes: {}, max: {}, mean: {}'.format(df['nbtunes'].min(),
+    print('Min tunes: {}, max: {}, mean: {:.2f}'.format(df['nbtunes'].min(),
                                               df['nbtunes'].max(),
                                               df['nbtunes'].mean()))
     print()
