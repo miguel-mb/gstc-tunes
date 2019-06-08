@@ -183,6 +183,16 @@
                     "Chop suey",
                     "Hotel California",
                     "Call me",
-                    "Message in a bottle"] }
+                    "Message in a bottle"] },
+        { "date": "2019-06-04",
+          "tunes": ["Thunderstruck",
+                    "Carry on wayward son",
+                    "Fear of the dark",
+                    "Lonely day",
+                    "Hotel California",
+                    "The show must go on",
+                    "Knights of Cydonia",
+                    "Chop suey",
+                    "Call me"] }
     ]
 }
