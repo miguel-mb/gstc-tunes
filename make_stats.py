@@ -62,6 +62,11 @@ def main(json_path):
     monthago = (datetime.now() - timedelta(days=28))\
                                      .strftime('%Y-%m-%d')
 
+    print('Last rehearsal:')
+    print('---------------')
+    print('{}'.format(', '.join(data['rehearsals'][-1]['tunes'])))
+    print()
+
     print('Tunes scores:')
     print('----------------')
     tunes_scores(tunes)
@@ -77,10 +82,6 @@ def main(json_path):
     print('----------------')
     rehearsals_stats(data['rehearsals'])
     
-    print('Last rehearsal:')
-    print('---------------')
-    print('{}'.format(', '.join(data['rehearsals'][-1]['tunes'])))
-    print()
         
 if __name__ == "__main__":
     if len(sys.argv) == 2:
