@@ -223,6 +223,23 @@
                     "Lonely day",
                     "Radio video",
                     "Superman",
-                    "Bob"] }
+                    "Bob"] },
+        { "date": "2019-06-25",
+          "tunes": ["Message in a bottle",
+                    "Sweet child o' mine",
+                    "Highway star",
+                    "Delivery",
+                    "The show must go on",
+                    "Sweet dreams",
+                    "Antisocial",
+                    "L'iditenté",
+                    "Thunderstruck",
+                    "Kids aren't alright",
+                    "Hotel California",
+                    "Lonely day",
+                    "Chop suey",
+                    "Killing in the name",
+                    "Empty walls",
+                    "Time is running out"] }
     ]
 }
