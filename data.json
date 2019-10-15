@@ -288,6 +288,20 @@
                     "The show must go on",
                     "Plug in baby",
                     "L'iditenté",
-                    "Paradise city"]}
+                    "Paradise city"]},
+        { "date": "2019-10-01",
+          "tunes": ["Reptilia",
+                    "Carry on wayward son",
+                    "Knights of Cydonia",
+                    "Antisocial",
+                    "You're gonna go far kid",
+                    "Plug in baby",
+                    "Call me",
+                    "Hot stuff",
+                    "Fear of the dark"]},
+        { "date": "2019-10-08",
+          "tunes": ["Reptilia",
+                    "Knights of Cydonia",
+                    "Carry on wayward son"]}
     ]
 }
