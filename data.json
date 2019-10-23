@@ -1,7 +1,9 @@
 {
     "tunes": [
         { "name": "Antisocial",
-          "original_band": "Trust" },
+          "original_band": "Trust" },        
+        { "name": "All the small things",
+          "original_band": "Blink" },
         { "name": "Bob",
           "original_band": "NoFX" },
         { "name": "By the way",
@@ -302,6 +304,21 @@
         { "date": "2019-10-08",
           "tunes": ["Reptilia",
                     "Knights of Cydonia",
-                    "Carry on wayward son"]}
+                    "Carry on wayward son",
+                    "Paradise city",
+                    "Time is running out"]},
+        { "date": "2019-10-15",
+          "tunes": ["Silvera",
+                    "Spiderwebs",
+                    "The show must go on",
+                    "Under pressure",
+                    "Carry on wayward son"]},
+        { "date": "2019-10-22",
+          "tunes": ["Silvera",
+                    "Thunderstruck",
+                    "Call me",
+                    "All the small things",
+                    "Lonely day",
+                    "Holiday"]}
     ]
 }
