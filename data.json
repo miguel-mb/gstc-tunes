@@ -319,6 +319,18 @@
                     "Call me",
                     "All the small things",
                     "Lonely day",
-                    "Holiday"]}
+                    "Holiday"]},
+        { "date": "2019-10-29",
+          "tunes": ["Silvera",
+                    "Walk of life",
+                    "Sweet child o' mine",
+                    "Highway star",
+                    "L'iditenté"]},
+        { "date": "2019-11-05",
+          "tunes": ["Bob",
+                    "Radio video",
+                    "Silvera",
+                    "Carry on wayward son",
+                    "Hotel California"]}
     ]
 }
