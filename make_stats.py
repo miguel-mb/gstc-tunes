@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-
+#!C:\Users\migue\AppData\Local\Programs\Python\Python38-32\python.exe
+# -*- coding: utf-8 -*-
 import sys
 import json
 from collections import defaultdict
@@ -84,9 +84,7 @@ def main(json_path):
     
         
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        main(sys.argv[1])
-    else:
-        usage()
+    main("data.json")
+    input()
 
 
