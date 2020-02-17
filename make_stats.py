@@ -4,6 +4,7 @@ import sys
 import json
 from collections import defaultdict
 from datetime import datetime, timedelta
+import traceback
 import pandas as pd
 
 def usage():
@@ -84,7 +85,11 @@ def main(json_path):
     
         
 if __name__ == "__main__":
-    main("data.json")
+    try:
+        main("data.json")
+    except:
+        traceback.print_exc()
     input()
+    
 
 
