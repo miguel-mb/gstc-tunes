@@ -1,9 +1,10 @@
-#!/usr/bin/env python
-
+#!C:\Users\migue\AppData\Local\Programs\Python\Python38-32\python.exe
+# -*- coding: utf-8 -*-
 import sys
 import json
 from collections import defaultdict
 from datetime import datetime, timedelta
+import traceback
 import pandas as pd
 
 def usage():
@@ -84,9 +85,11 @@ def main(json_path):
     
         
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        main(sys.argv[1])
-    else:
-        usage()
+    try:
+        main("data.json")
+    except:
+        traceback.print_exc()
+    input()
+    
 
 
